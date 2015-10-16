@@ -1,8 +1,8 @@
 # Get-Entity
 Scripts to query local admins quickly
 
-1. Power Admin queries local admins in a multi-threaded manner very quickly
-2. Power Admin Get Address does the same but also uses DNS to perform it by IP address. This is more accurate but requires DNS.
+1. Power Admin queries local admins very quickly, but utilizes a DNS lookup because the WinNT Provider doesn't like FQDN.
+2. 2. Power Admin Hosts does the same but without a DNS query, so it expects you to be able to provide the correct hostname for WinNT Provider.
 
 Obviously you'll get some errors for network paths not found or no response.
 
