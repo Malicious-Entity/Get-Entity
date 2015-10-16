@@ -7,7 +7,9 @@ Scripts to query local admins quickly
 Obviously you'll get some errors for network paths not found or no response.
 
 Usage:
+
 Just run the damn script, it will prompt for all the arguments
+
 Both versions of power admin take these arguments
 "Thread:" - The number of threads to run concurrently
 "Location:" - The location of a file with all hostnames or IP addresses seperated by line breaks
