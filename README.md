@@ -2,7 +2,7 @@
 Scripts to query local admins quickly
 
 1. Power Admin queries local admins in a multi-threaded manner very quickly
-2. Power Admin Get Address does the same but also uses DNS to perform it by IP address.
+2. Power Admin Get Address does the same but also uses DNS to perform it by IP address. This is more accurate but requires DNS access.
 
 Usage:
 Just run the damn script, it will prompt for all the arguments
