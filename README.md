@@ -11,9 +11,13 @@ Usage:
 Just run the damn script, it will prompt for all the arguments
 
 Both versions of power admin take these arguments
+
 "Thread:" - The number of threads to run concurrently
+
 "Location:" - The location of a file with all hostnames or IP addresses seperated by line breaks
+
 "User:" - Pretty obvious, supports DOMAIN\user format
+
 "Pass:" - Also obvious
 
 To Do: Support groups besides just administrators, big fixes
