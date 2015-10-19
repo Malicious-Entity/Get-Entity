@@ -8,7 +8,7 @@ Obviously you'll get some errors for network paths not found or no response.
 
 Usage:
 
-Just run the damn script, it will prompt for all the arguments
+Just run the script, it will prompt for all the arguments
 
 Both versions of power admin take these arguments
 
@@ -20,4 +20,4 @@ Both versions of power admin take these arguments
 
 "Pass:" - Also obvious
 
-To Do: Support groups besides just administrators, big fixes
+To Do: Support groups besides just administrators, bug fixes
