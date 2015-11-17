@@ -1,3 +1,6 @@
+#Update: Variable was in wrong position in the original version - fixed
+#Also tested script in Enterprise environment, using 1 process with 15 threads, queried 600 systems in ~15 minutes.
+
 Scripts to query local admins quickly
 
 Power Admin queries local admins very quickly, but utilizes a DNS lookup because the WinNT Provider doesn't like FQDN.
