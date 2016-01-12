@@ -11,7 +11,7 @@ Power Admin queries local admins very quickly, but utilizes a DNS lookup because
 Power Admin Hosts does the same but without a DNS query, so it expects you to be able to provide the correct hostname for WinNT Provider.
 Obviously you'll get some errors for network paths not found or no response.
 
-Usage:
+#Usage:
 
 Just run the script, it will prompt for all the arguments
 
