@@ -1,4 +1,4 @@
-﻿    #Requires -Version 2.0
+    #Requires -Version 2.0
     [cmdletbinding()]
     Param (
         [parameter(Mandatory=$true,ValueFromPipeline=$true,ValueFromPipelineByPropertyName=$true,Position=0)]
@@ -67,8 +67,8 @@
 			$NTQueryResult,
             $GroupName
 			)
+			If (Test-Connection -ComputerName $Computer -Count 2 -Quiet) {
 			try {
-			
 			cmdkey /add:$Computer /user:$user /pass:$password
 			
 			echo cmdkey /add:$Computer /user:$user /pass:$password
@@ -82,7 +82,8 @@
 			
 			cmdkey /delete:$Computer
     
-        			}
+        																	} else{"Host $Computer Seems Down or Unreachable, Skipping"}
+					}
         
         Write-Verbose ("Creating runspace pool and session states")
         $sessionstate = [system.management.automation.runspaces.initialsessionstate]::CreateDefault()
@@ -98,7 +99,6 @@
         Write-Verbose ("Querying Administrators on " + $totalcount + " systems")        
         ForEach ($Computer in $computername) {
            
-		   If (Test-Connection -ComputerName $Computer -Count 2 -Quiet) {
            $Computer = [System.Net.Dns]::GetHostAddresses($Computer) | Where-Object IPAddressToString -NotLike "*:*" | select -ExpandProperty IPAddressToString
            $powershell = [powershell]::Create().AddScript($ScriptBlock).AddArgument($Computer).AddArgument($user).AddArgument($password)
 
@@ -116,9 +116,7 @@
            Get-RunspaceData @runspacehash
 		   																
 																		}           
-		   else{"Host $Computer Seems Down or Unreachable, Skipping"}
         }                        
-    }
     End {                     
         Write-Verbose ("Finish processing the remaining runspace jobs: {0}" -f (@(($runspaces | Where {$_.Runspace -ne $Null}).Count)))
         $runspacehash.Wait = $true
