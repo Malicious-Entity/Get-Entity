@@ -1,7 +1,7 @@
 #Enterprise environment, using 1 process with 15 threads, queried 600 systems in ~15 minutes.
 
 #Known Bugs:
-Errors out on systems with more than one DNS entry (dual-homed etc.)
+Errors out on systems with more than one DNS entry (dual-homed etc.). Workaround: providing the IP directly instead of hostname.
 
 #Updates
 Coming soon: Alternate mode for when storing network credentials is disabled also enabling the script to run as the current logged in user (no user/pass input) for instances where a system is compromised, but not the user password. As a workaround, the script can be changed to make the paramaters not mandatory.
